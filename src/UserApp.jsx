@@ -1,3 +1,6 @@
+import AgregarProductoFormulario from "./components/agregar"
+import EditarProducto from "./components/editar"
+import { NavBar } from "./components/navbar"
 import { SearchComponent } from "./components/SearchComponent"
 import { UsersList } from "./components/UsersList"
 
@@ -112,10 +115,11 @@ export const UserApp = () => {
     ]
     return (
         <>
+        <div className="row"><NavBar/></div>
             <div className="container my-4">
-                <h2>Users App</h2>
-                <p>Formulario de Usuarios</p>
-                <div className="row w-50 mx-auto mb-3"><SearchComponent/></div>
+                {/* <div className="row w-50 mx-auto"><AgregarProductoFormulario/></div> */}
+                {/* <div className="row w-50 mx-auto"><EditarProducto/></div> */}
+                <div className="row w-50 mx-auto mb-3 mt-3"><SearchComponent/></div>
                 <div className="row">
                     <UsersList elements={initialElements} />
                 </div>
